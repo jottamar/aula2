@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Prof Roger Bassan | 04</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+
+        }
+        .box-nav{
+            background-color: gold;
+            padding: 5px;
+            border-radius: 15px;
+        }
+        .box{
+            background: rgba(0, 0, 0, 0.6);
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            padding: 15px;
+            border-radius: 15px;
+            color: white;
+        }
+        input{
+            padding: 10px;
+            border: none;
+            outline:none;
+            border-radius: 10px;
+            font-size: 15px;
+            width: 50%;
+        }
+        button{
+            padding: 10px;
+            border: none;
+            outline: none;
+            width: 50%;
+            background-color: slateblue;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        button:hover{
+            background-color: cornflowerblue;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box-nav">
+        <h1>EXERCÍCIO #04</h1>
+        <h2>Disciplina de Algoritmos</h2>
+    </div>
+    <div class="box">
+        <p>Leia 2 números. Efetue as 4 operações matemáticas e mostre os resultados.
+        ( + - * /)</p>
+        <input type="number" id="value1" class="num" placeholder="Digite o número A">
+        <br><br>
+        <input type="number" id="value2" class="num" placeholder="Digite o número B">
+        <br><br>
+        <input type="number" id="adicao" name="opereration" value="adicao">
+        <label for="adicao">Adição</label>
+        <br><br>
+        <input type="number" id="subtracao" name="opereration" value="subtracao">
+        <label for="subtracao">Subtração</label>
+        <br><br>
+        <input type="number" id="multiplicacao" name="opereration" value="multiplicacao">
+        <label for="multiplicacao">Multiplicação</label>
+        <br><br>
+        <input type="number" id="divisao" name="opereration" value="divisao">
+        <label for="divisao">Divisão</label>
+        <br><br>
+        <button onclick="operacoesmatematicas()">Enviar</button>
+    </div>
+</body>
+    <script>
+        function calculation()
+        {
+            var num1 = parseFloat(document.querySelector('#value1').value);
+            var num2 = parseFloat(document.querySelector('#value2').value);
+            var selectOperation = document.querySelector('input[name=""operation"]:checked').value;
+            var nameOperation,calculo;
+
+            if (selectOperation){
+                nameOperation = 'adicao';
+                calculo = a + b;
+            }
+            
+        }
+    </script>
+</html>

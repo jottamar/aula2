@@ -1,0 +1,2 @@
+Leia valores A e B. Trocar os valores entre as duas variáveis, a variável A passa a
+possuir o valor da variável B e a variável B passa a possuir o valor da variável A.

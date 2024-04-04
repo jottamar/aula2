@@ -1,0 +1,2 @@
+Leia as idades de duas crianças. Após, calcular e mostrar a soma das idades e a
+média.
