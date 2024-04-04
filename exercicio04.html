@@ -85,11 +85,24 @@
             var selectOperation = document.querySelector('input[name=""operation"]:checked').value;
             var nameOperation,calculo;
 
-            if (selectOperation){
-                nameOperation = 'adicao';
+            if (selectOperation == 'adicao'){
+                nameOperation = 'Adição';
                 calculo = a + b;
             }
-            
+            else if (selectOperation == 'subtracao'){
+                nameOperation = 'Subtrção';
+                calculo = a - b;
+            }
+            else if(selectOperation == 'multiplicacao'){
+                nameOperation = 'Multiplicação';
+                calculo = a * b;
+            }
+            else {
+                nameOperation = 'Divisão';
+                calculo = a / b;
+            }
+            alert(nameOperation+': ' +calculo);
+
         }
     </script>
 </html>
