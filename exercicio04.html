@@ -56,53 +56,50 @@
         <h2>Disciplina de Algoritmos</h2>
     </div>
     <div class="box">
-        <p>Leia 2 números. Efetue as 4 operações matemáticas e mostre os resultados.
-        ( + - * /)</p>
+        <p>Leia 2 números. Efetue as 4 operações matemáticas e mostre os resultados. ( + - * /)</p>
         <input type="number" id="value1" class="num" placeholder="Digite o número A">
         <br><br>
         <input type="number" id="value2" class="num" placeholder="Digite o número B">
         <br><br>
-        <input type="number" id="adicao" name="opereration" value="adicao">
+        <input type="radio" id="adicao" name="operation" value="adicao">
         <label for="adicao">Adição</label>
         <br><br>
-        <input type="number" id="subtracao" name="opereration" value="subtracao">
+        <input type="radio" id="subtracao" name="operation" value="subtracao">
         <label for="subtracao">Subtração</label>
         <br><br>
-        <input type="number" id="multiplicacao" name="opereration" value="multiplicacao">
+        <input type="radio" id="multiplicacao" name="operation" value="multiplicacao">
         <label for="multiplicacao">Multiplicação</label>
         <br><br>
-        <input type="number" id="divisao" name="opereration" value="divisao">
+        <input type="radio" id="divisao" name="operation" value="divisao">
         <label for="divisao">Divisão</label>
         <br><br>
-        <button onclick="operacoesmatematicas()">Enviar</button>
+        <button onclick="calculation()">Enviar</button>
     </div>
-</body>
-    <script>
-        function calculation()
-        {
-            var num1 = parseFloat(document.querySelector('#value1').value);
-            var num2 = parseFloat(document.querySelector('#value2').value);
-            var selectOperation = document.querySelector('input[name=""operation"]:checked').value;
-            var nameOperation,calculo;
 
+    <script>
+        function calculation() {
+            var num1 = parseInt(document.querySelector('#value1').value);
+            var num2 = parseInt(document.querySelector('#value2').value);
+            var selectOperation = document.querySelector('input[name="operation"]:checked').value;
+            var nameOperation, calculo;
             if (selectOperation == 'adicao'){
                 nameOperation = 'Adição';
-                calculo = a + b;
+                calculo = num1 + num2;
             }
             else if (selectOperation == 'subtracao'){
-                nameOperation = 'Subtrção';
-                calculo = a - b;
+                nameOperation = 'Subtração';
+                calculo = num1 - num2;
             }
             else if(selectOperation == 'multiplicacao'){
                 nameOperation = 'Multiplicação';
-                calculo = a * b;
+                calculo = num1 * num2;
             }
             else {
                 nameOperation = 'Divisão';
-                calculo = a / b;
+                calculo = num1 / num2;
             }
-            alert(nameOperation+': ' +calculo);
-
+            alert(nameOperation + ': ' + calculo);
         }
     </script>
+</body>
 </html>
